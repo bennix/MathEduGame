@@ -3,66 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eee6d2">
-  <meta name="description" content="MathGame — 把数字算到零。免费桌面数学射击游戏。">
-  <link rel="icon" type="image/png" href="assets/icon.png">
+  <meta name="theme-color" content="#fff9ea">
+  <meta name="description" content="数学冒险岛：按照 A7 数学大纲设计的 50 关互动学习游戏。每个知识主题 6 道题，边玩边学，逐关探索。">
+  <title>数学冒险岛 · 把知识变成一场冒险</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>MathGame — 把数字算到零</title>
 </head>
 <body>
-  <div class="paper-grain" aria-hidden="true"></div>
-  <header class="masthead wrap">
-    <a class="brand" href="#top" aria-label="MathGame"><img src="assets/icon.png" alt=""><span>MATH<span class="brand-red">GAME</span></span></a>
-    <nav aria-label="Main navigation">
-      <a href="#how" data-i18n="navHow">玩法</a>
-      <a href="#download" data-i18n="navDownload">下载</a>
-      <a href="https://github.com/bennix/MathGame" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
-    <button id="language" class="language" type="button" aria-label="Switch language">EN</button>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="数学冒险岛首页"><img src="assets/icon.png" alt=""><span>数学冒险岛<small>MATH ADVENTURE ISLAND</small></span></a>
+    <nav aria-label="网站导航"><a href="#journey">课程路线</a><a href="#how">怎么玩</a><a href="#download">下载</a></nav>
+    <a class="header-play" href="./play/">开始闯关 <span>↗</span></a>
   </header>
-
   <main id="top">
     <section class="hero wrap">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">一场写在草稿纸上的数学混战</span></div>
-        <h1 data-i18n="heroTitle">把数字<br><em>算到零。</em></h1>
-        <p class="lead" data-i18n="heroLead">数字正在逼近。移动、瞄准、开火，用减法、除法、开方与取模，把每个敌人一步步化为零。</p>
-        <div class="hero-actions"><a class="primary-button" href="#download"><span data-i18n="getGame">获取游戏</span><b>↗</b></a><a class="text-link" href="#demo"><span data-i18n="watchDemo">观看实机演示</span> ↓</a></div>
-        <div class="platform-line"><span data-i18n="available">适用于</span> <strong>macOS</strong><i>·</i><strong>Windows</strong><i>·</i><strong>Linux</strong></div>
+        <span class="pill"><span class="pill-dot"></span> 为好奇的小小探索家而做</span>
+        <h1>数学，不只<br>是<span class="scribble">做题。</span><br><em>是冒险！</em></h1>
+        <p>沿着 A7 数学大纲，从数轴走到几何，从方程走到概率。每道题都是一次动手尝试，每次通关都点亮一颗知识星。</p>
+        <div class="hero-buttons"><a class="button button-dark" href="./play/">现在开始玩 <span>↗</span></a><a class="button button-light" href="#journey">看看冒险地图 <span>↓</span></a></div>
+        <div class="hero-proof"><span>✦ <b>50</b> 个循序渐进关卡</span><span>✦ 每关 <b>6–9</b> 道题</span><span>✦ 错了也能继续探索</span></div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="orbit orbit-one">18</div><div class="orbit orbit-two">7</div><div class="orbit orbit-three">3</div>
-        <div class="hero-zero">0<span>−</span></div>
-        <div class="sketch-arrow arrow-a">↘</div><div class="sketch-arrow arrow-b">↙</div>
-        <div class="annotation" data-i18n="annotation">目标：归零！</div>
-      </div>
-    </section>
-
-    <section id="demo" class="demo-section">
-      <div class="wrap">
-        <div class="section-kicker">01 / <span data-i18n="demoKicker">实机画面</span></div>
-        <div class="video-frame"><div class="video-top"><span class="red-dot"></span><span>mathgame — live calculation</span><span>× × ×</span></div><video controls playsinline muted loop preload="metadata" poster="assets/gameplay.png" aria-label="MathGame gameplay demonstration"><source src="assets/demo.mp4" type="video/mp4"></video></div>
-        <div class="video-caption"><span data-i18n="videoCaption">用一个数字，改写另一个数字的命运。</span><span>WASD + MOUSE · 1—4</span></div>
-      </div>
-    </section>
-
-    <section id="how" class="how wrap">
-      <div class="section-kicker">02 / <span data-i18n="howKicker">游戏公式</span></div>
-      <div class="section-head"><h2 data-i18n="howTitle">四种运算，<br>无限种解法。</h2><p data-i18n="howIntro">每一发子弹都是一个数字。切换运算符，选择恰好的时机，让敌人的数值归零。波次越高，数字越大，挑战也越难。</p></div>
-      <div class="operation-grid">
-        <article class="operation-card red"><span class="op-num">01</span><span class="op-symbol">−</span><h3 data-i18n="subtract">减法</h3><p data-i18n="subtractDesc">直接削减数字，最可靠的起手式。</p><div class="equation">9 − 3 = <b>6</b></div></article>
-        <article class="operation-card blue"><span class="op-num">02</span><span class="op-symbol">÷</span><h3 data-i18n="divide">除法</h3><p data-i18n="divideDesc">把庞大的数字快速压低。</p><div class="equation">18 ÷ 3 = <b>6</b></div></article>
-        <article class="operation-card green"><span class="op-num">03</span><span class="op-symbol">√</span><h3 data-i18n="sqrt">开方</h3><p data-i18n="sqrtDesc">逐步逼近一，再给出最后一击。</p><div class="equation">√9 = <b>3</b></div></article>
-        <article class="operation-card purple"><span class="op-num">04</span><span class="op-symbol">%</span><h3 data-i18n="modulo">取模</h3><p data-i18n="moduloDesc">用余数创造意想不到的捷径。</p><div class="equation">9 % 3 = <b>0</b></div></article>
+      <div class="hero-scene" aria-label="数学冒险岛关卡预览">
+        <span class="scene-spark spark-a">✳</span><span class="scene-spark spark-b">✦</span><span class="scene-spark spark-c">✧</span>
+        <div class="floating-note note-one">3² = <b>9</b></div><div class="floating-note note-two">90°</div>
+        <div class="preview-card">
+          <div class="preview-top"><span>🧭 TERM A · 第 1 关</span><span>1 / 6</span></div>
+          <div class="preview-title">绝对值与相反数</div>
+          <div class="preview-question"><small>思考一下 ✦</small><strong>数轴上，−4 离 0 有几格？</strong></div>
+          <div class="preview-line"><span>−4</span><i></i><i></i><i></i><i></i><span>0</span></div>
+          <div class="preview-answer"><span>B</span> 4 格 <b>✓</b></div>
+          <div class="preview-success">答对啦！到 0 的距离就是绝对值 ✨</div>
+        </div>
+        <div class="scene-planet"></div>
       </div>
     </section>
-
-    <section class="feature-strip"><div class="wrap feature-inner"><span data-i18n="featureOne">✳ 手绘草稿纸世界</span><span data-i18n="featureTwo">✳ 每波三选一升级</span><span data-i18n="featureThree">✳ 越算越上头</span></div></section>
-
-    <section id="download" class="download wrap"><div class="section-kicker">03 / <span data-i18n="downloadKicker">开始演算</span></div><div class="download-inner"><div><h2 data-i18n="downloadTitle">准备好<br>归零了吗？</h2><p data-i18n="downloadText">免费下载桌面版。选一个系统，拿起你的铅笔。</p></div><div class="downloads"><a data-platform="mac" href="https://github.com/bennix/MathGame/releases/latest"><span>⌘</span><div><strong>macOS</strong><small data-i18n="macFormat">通用版 · DMG</small></div><b>↗</b></a><a data-platform="win" href="https://github.com/bennix/MathGame/releases/latest"><span>⊞</span><div><strong>Windows</strong><small data-i18n="winFormat">64 位 · 安装程序</small></div><b>↗</b></a><a data-platform="deb" href="https://github.com/bennix/MathGame/releases/latest"><span>✳</span><div><strong>Linux · DEB</strong><small>Debian / Ubuntu</small></div><b>↗</b></a><a data-platform="rpm" href="https://github.com/bennix/MathGame/releases/latest"><span>✳</span><div><strong>Linux · RPM</strong><small>Fedora / RHEL</small></div><b>↗</b></a></div></div></section>
+    <div class="ticker" aria-hidden="true"><div>动手试试 ✦ 勇敢猜想 ✦ 发现规律 ✦ 再来一关 ✦ 动手试试 ✦ 勇敢猜想 ✦ 发现规律 ✦ 再来一关 ✦</div></div>
+    <section class="journey wrap" id="journey">
+      <div class="section-intro"><span class="section-kicker">01 / 冒险地图</span><h2>从第一颗星，<br>走到整个数学宇宙。</h2><p>依照 A7 教学大纲安排五个学期。每学期九个主题关，加一关复习；孩子能清楚看见自己走过的路。</p></div>
+      <div class="term-list">
+        <article><span class="term-icon">🧭</span><div><small>TERM A</small><h3>数字的第一站</h3><p>绝对值、指数、有理数、角与图表</p></div><b>01—10</b></article>
+        <article><span class="term-icon">⚡</span><div><small>TERM B</small><h3>方程与图形</h3><p>方程、不等式、平行线与坐标</p></div><b>11—20</b></article>
+        <article><span class="term-icon">🌿</span><div><small>TERM C</small><h3>规律与应用</h3><p>平方根、勾股定理、速度与组合</p></div><b>21—30</b></article>
+        <article><span class="term-icon">🔭</span><div><small>TERM D</small><h3>几何大师</h3><p>三角形、圆、体积与概率</p></div><b>31—40</b></article>
+        <article><span class="term-icon">🏆</span><div><small>TERM E</small><h3>代数终极探险</h3><p>乘方、方程组、消费与统计</p></div><b>41—50</b></article>
+      </div>
+    </section>
+    <section class="how" id="how"><div class="wrap"><span class="section-kicker">02 / 怎么玩</span><div class="how-heading"><h2>孩子愿意再试一次，<br>就是学习开始的时候。</h2><p>把知识拆成短小的挑战，让操作、反馈与成就感连在一起。</p></div><div class="how-grid"><article><span>01</span><div class="how-icon">👆</div><h3>点一点，试一试</h3><p>点击答案卡，或拖到答案星球。每一步都由孩子自己决定。</p></article><article><span>02</span><div class="how-icon">💡</div><h3>错了就发现线索</h3><p>即时解释思路，继续尝试。不惩罚错误，让探索保持轻松。</p></article><article><span>03</span><div class="how-icon">⭐</div><h3>一关关点亮星星</h3><p>每个主题六道不同题目，期末复习九道题；进度自动保存在设备上。</p></article></div></div></section>
+    <section class="download wrap" id="download"><div class="download-panel"><div class="download-copy"><span class="section-kicker">03 / 带走冒险</span><h2>准备好，<br>出发吧！</h2><p>可以直接在浏览器里玩，也能下载桌面版。学习进度保存在使用的设备上。</p><a class="button button-yellow" href="./play/">打开网页版 <span>↗</span></a></div><div class="download-options"><a data-platform="mac" href="https://github.com/bennix/MathEduGame/releases/latest"><span class="platform-icon">⌘</span><span><strong>macOS</strong><small>通用版 · 已签名公证 DMG</small></span><b>↗</b></a><a data-platform="win" href="https://github.com/bennix/MathEduGame/releases/latest"><span class="platform-icon">⊞</span><span><strong>Windows</strong><small>64 位安装程序</small></span><b>↗</b></a><a data-platform="deb" href="https://github.com/bennix/MathEduGame/releases/latest"><span class="platform-icon">◈</span><span><strong>Linux · DEB</strong><small>Debian / Ubuntu</small></span><b>↗</b></a><a data-platform="rpm" href="https://github.com/bennix/MathEduGame/releases/latest"><span class="platform-icon">◈</span><span><strong>Linux · RPM</strong><small>Fedora / RHEL</small></span><b>↗</b></a></div></div></section>
   </main>
-
-  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> MathGame</span><span data-i18n="footer">用一点数学，换一点快乐。</span><a href="https://github.com/bennix/MathGame" target="_blank" rel="noopener">Source on GitHub ↗</a></div></footer>
+  <footer class="wrap"><span>© <span id="year"></span> 数学冒险岛</span><span>让数学之光照亮每一个孩子 ✦</span><a href="https://github.com/bennix/MathEduGame" target="_blank" rel="noopener">GitHub ↗</a></footer>
   <script src="script.js"></script>
 </body>
 </html>

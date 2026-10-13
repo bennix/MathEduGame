@@ -1,7 +1,7 @@
 {
-  "name": "mathgame",
-  "version": "1.0.1",
-  "description": "A hand-drawn mathematical arcade shooter",
+  "name": "mathedugame",
+  "version": "1.0.0",
+  "description": "A chapter-based interactive math adventure for beginners",
   "author": {
     "name": "ZHIPING XU",
     "email": "bennix@users.noreply.github.com"
@@ -18,9 +18,6 @@
     "dist:linux": "npm run build && electron-builder --linux deb rpm --x64 --publish never",
     "test": "node --test"
   },
-  "dependencies": {
-    "phaser": "^3.90.0"
-  },
   "devDependencies": {
     "concurrently": "^9.2.1",
     "electron": "^35.7.5",
@@ -29,8 +26,8 @@
     "wait-on": "^8.0.3"
   },
   "build": {
-    "appId": "com.mathgame.zerosum",
-    "productName": "MathGame",
+    "appId": "com.bennix.mathedugame",
+    "productName": "数学冒险岛",
     "files": [
       "dist/**/*",
       "electron/**/*",
@@ -45,12 +42,13 @@
       "target": "dmg",
       "icon": "build/icon.icns",
       "identity": "ZHIPING XU (5N66S29EK2)",
+      "signIgnore": "\\.pak$",
       "hardenedRuntime": true,
       "entitlements": "build/entitlements.mac.plist",
       "entitlementsInherit": "build/entitlements.mac.plist"
     },
     "dmg": {
-      "title": "MathGame ${version}"
+      "title": "数学冒险岛 ${version}"
     },
     "win": {
       "target": "nsis",
@@ -62,7 +60,7 @@
         "rpm"
       ],
       "icon": "build/icon.png",
-      "category": "Game"
+      "category": "Education"
     }
   }
 }
