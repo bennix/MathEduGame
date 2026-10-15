@@ -62,5 +62,6 @@
       "icon": "build/icon.png",
       "category": "Education"
     }
-  }
+  },
+  "license": "GPL-3.0-only"
 }
